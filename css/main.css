@@ -4,14 +4,14 @@ header {
     float: left;
 }
 .logotype {
-    width: 50%;
+    width: 20%;
     float:left;
 }
 .logotype h1 {
     margin-left: 1em;
 }
 .nav-menu {
-    width: 50%;
+    width: 40%;
     float: right;
 }
 .nav-menu ul {
@@ -28,4 +28,29 @@ header {
     font-size: 1em;
     color: white;
     font-weight: bold;
+}
+.src-bar{
+    width: 40%;
+    float: left;
+}
+#bar{
+    width: 80%;
+    position: relative;
+    margin-left: 80px;
+    margin-top: 28px;
+    border-radius: 3px 3px;
+    border: none;
+    height: 25px;
+    padding-left: 5px;
+}
+.capa{
+    width: 100%;
+    float: left;
+    height: 30%;
+}
+#img-capa{
+    height: 50%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 50%;
 }
