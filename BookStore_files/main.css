@@ -57,23 +57,9 @@ body{
 }
 .sec-menu{
     float: left;
-    width: 15%;
+    width: 30%;
 }
 .img-mv{
-    width: 50%;
-}
-.sec-menu li{
-    list-style-type: none;
-    margin-bottom: 20%;
-    
-}
-.sec-menu legend{
-    text-align: center;
-    margin-right: 60%;
-}
-.sec-menu h3{
-    text-align: center;
-    margin-right: 15%;
-    border-top: 1px black solid;
-    padding-top: 5%;
+    width: 90px;
+    height: 100px;
 }
