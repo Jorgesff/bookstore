@@ -4,6 +4,7 @@
     <title>BookStore</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -24,43 +25,83 @@
     </header>
     <div class="capa">
         <img id="img-capa" src="livro-capa.jpg">
-    </div>
-    <section class="sec-menu">
-        <ul>
-            <li>
+    </div>-
+    <section class="sec-banner">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <h3>Mais vendidos</h3>
-                <div>
-                    <ul>
-                        <li><img class="img-mv" src="mv_1.jpg"/><legend class="mv-legend">Guerra civil</legend></li>
-                        <li><img class="img-mv" src="mv_2.jpg">
-                        <legend class="mv-legend">Joker</legend></li>
-                        <li><img class="img-mv" src="mv_3.jpg"><legend class="mv-legend">Rebelião das massas</legend></li>
+                
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_1.jpg" width="150px" />
+                                <legend class="mv-legend">Guerra civil</legend>
+                        </li>
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_2.jpg" width="150px"/>
+                            <legend class="mv-legend">Joker</legend>
+                        </li>
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_3.jpg" width="150px"/>
+                            <legend class="mv-legend">Rebelião das massas</legend>
+                        </li>
                     </ul>
-                </div>
             </li>
-            <li>                
-                <h3>Destaques da semana</h3>
-                <div>   
-                    <ul>
-                        <li><img class="img-mv" src="mv_1.jpg"/><legend class="mv-legend">Guerra civil</legend></li>
-                        <li><img class="img-mv" src="mv_2.jpg">
-                        <legend class="mv-legend">Joker</legend></li>
-                        <li><img class="img-mv" src="mv_3.jpg"><legend class="mv-legend">Rebelião das massas</legend></li>
+            <li class="list-group-item">                
+                <h3>Destaques da semana</h3>   
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_1.jpg" width="150px"/>
+                            <legend class="mv-legend">Guerra civil</legend>
+                        </li>
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_2.jpg" width="150px"/>
+                            <legend class="mv-legend">Joker</legend>
+                        </li>
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_3.jpg" width="150px"/>
+                            <legend class="mv-legend">Rebelião das massas</legend>
+                        </li>
                     </ul>
-                </div>
             </li>
-            <li>
+            <li class="list-group-item">
             <h3>Lancamentos</h3>
-                <div>   
-                    <ul>
-                        <li><img class="img-mv" src="mv_1.jpg"/><legend class="mv-legend">Guerra civil</legend></li>
-                        <li><img class="img-mv" src="mv_2.jpg">
-                        <legend class="mv-legend">Joker</legend></li>
-                        <li><img class="img-mv" src="mv_3.jpg"><legend class="mv-legend">Rebelião das massas</legend></li>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_1.jpg" width="150px"/>
+                            <legend class="mv-legend">Guerra civil</legend>
+                        </li>
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_2.jpg" width="150px"/>
+                            <legend class="mv-legend">Joker</legend>
+                        </li>
+                        <li class="list-group-item">
+                            <img class="img-responsive" src="mv_3.jpg" width="150px"/>
+                            <legend class="mv-legend">Rebelião das massas</legend>
+                        </li>
                     </ul>
-                </div></li>
+            </li>
         </ul>
     </section>
-    
+    <section class="sec-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="tb-item">
+                        <img class="img-responsive" src="BookStore_files/lv-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tb-item">
+                        <img class="img-responsive" src="BookStore_files/lv-2.jpg">
+                    </div>
+                </div>   
+                <div class="col-md-4">
+                    <div class="tb-item">
+                        <img class="img-responsive" src="BookStore_files/lv-3.jpg">
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </section> 
 </body>
 </html>
