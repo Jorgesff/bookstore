@@ -46,36 +46,44 @@ body{
     height: 25px;
     padding-left: 5px;
 }
-.capa{
-    width: 100%;
-    float: left;
+#crs-capa{
     height: 300px;
 }
-#img-capa{
+#capa{
     width: 100%;
+    float: left;
     height: 100%;
 }
-.sec-banner{
+.carousel-inner .item img{
+    width: 70%;
+    margin: auto;
+    height: 300px;
+}
+#sec-banner{
     float: left;
     width: 15%;
+    background: #FDFFD6;
 }
 .img-mv{
     width: 50%;
 }
-.sec-banner li{
+#sec-banner li{
     list-style-type: none;
     margin-bottom: 20%;
     
 }
-.sec-banner legend{
+#sec-banner legend{
     text-align: center;
-    
 }
-.sec-banner h3{
+
+#sec-banner h3{
     text-align: center;
     margin-right: 15%;
     border-top: 1px black solid;
     padding-top: 5%;
+}
+#ul-banner{
+    background-color:#FDFFD6;
 }
 .sec-shop{
     width: 85%;
