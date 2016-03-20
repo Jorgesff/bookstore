@@ -6,7 +6,6 @@
 header {
     width: 100%;
     background-color: #232F3E;
-    float: left;
 }
 body{
     background-color: #FDFFD6;
@@ -65,4 +64,8 @@ body{
 /* Hacking */
 .carousel {
     position: initial !important;
+}
+.carousel-control {
+    margin-top: 70px;
+    height: 520px !important;
 }
