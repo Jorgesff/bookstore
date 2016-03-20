@@ -52,15 +52,11 @@ body{
 
 
 /* Banners */
-.item img {
-    width: 100%;
-    height: 520px !important;
+.fullscreen {
+    width:100%;
 }
 
 /* Content */
-#content img {
-    width: 70%;
-}
 .content-title {
     margin: 1em 2em;
     font-size: 2.1em;
@@ -69,6 +65,13 @@ body{
     border-bottom: 1px solid #CCC;
 }
 
+/* Footer */
+footer {
+    background:#333;
+    color:#fff;
+    padding:20px 0;
+    text-align:center;
+}
 
 /* Hacking */
 .carousel {
@@ -76,5 +79,5 @@ body{
 }
 .carousel-control {
     margin-top: 70px;
-    height: 520px !important;
+    height: 375px !important;
 }
