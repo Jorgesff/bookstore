@@ -7,7 +7,7 @@
 Crie o diretório do projeto e entre
 ```
     mkdir bookstore
-    cd boostore
+    cd bookstore
 ```
 
 Inicialize, baixe e instale o projeto
