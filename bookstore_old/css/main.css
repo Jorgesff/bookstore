@@ -1,0 +1,40 @@
+/*
+    Bookstore - main CSS
+*/
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #232F3E;
+    float: left;
+}
+body{
+    background-color: #FDFFD6;
+}
+.logotype {
+    width: 20%;
+    float:left;
+}
+.logotype h1 {
+    margin-left: 1em;
+    color: #F2F2F2;
+}
+.nav-menu {
+    width: 40%;
+    float: right;
+}
+.nav-menu ul {
+    list-style: none;
+    float: right;
+    margin: 2em 2em 0 0;
+}
+.nav-menu ul li {
+    display: inline;
+    margin: 0 1em;
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
