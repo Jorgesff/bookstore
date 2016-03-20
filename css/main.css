@@ -2,13 +2,13 @@
     Bookstore - main CSS
 */
 
-/* start Header */
+/* Header */
 header {
     width: 100%;
     background-color: #232F3E;
 }
 body{
-    background-color: #FDFFD6;
+    overflow-x:hidden;
 }
 .logotype {
     color: #F2F2F2;
@@ -32,9 +32,6 @@ body{
 .search-bar {
     padding-top: 1.2em;
 }
-#search_bar{
-    width: 100%;
-}
 .search-font {
     float: right;
     margin-top: -34px;
@@ -53,13 +50,25 @@ body{
     color: white;
 }
 
-/* end Header*/
 
-/* start Banners */
+/* Banners */
 .item img {
     width: 100%;
     height: 520px !important;
 }
+
+/* Content */
+#content img {
+    width: 70%;
+}
+.content-title {
+    margin: 1em 2em;
+    font-size: 2.1em;
+    color: #232F3E;
+    font-weight: bold;
+    border-bottom: 1px solid #CCC;
+}
+
 
 /* Hacking */
 .carousel {

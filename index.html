@@ -6,55 +6,121 @@
     <link rel="stylesheet" type="text/css" href="js/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="js/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
 </head>
 <body>
     <header>
-        <div class="row">
-            <div class="col-md-2">
-                <h1 class="logotype">BookStore</h1>
-            </div>
-            <div class="col-md-6">
-                <form class="search-bar">
-                    <div class="form-group">
-                        <input type="text" id="search_bar" class="form-control" placeholder="O que você procura ?" />
-                        <button class="search-font">
-                            <span class="glyphicon glyphicon-search search-icon"></span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-4">
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="">Login</a></li>
-                        <li><a href="">Cadastre-se</a></li>
-                        <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span>0</li>
-                    </ul>
-                </nav>
+        <div class="content-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <h1 class="logotype">BookStore</h1>
+                </div>
+                <div class="col-md-6">
+                    <form class="search-bar">
+                        <div class="form-group">
+                            <input type="text" id="search_bar" class="form-control" placeholder="O que você procura ?" />
+                            <button class="search-font">
+                                <span class="glyphicon glyphicon-search search-icon"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="">Login</a></li>
+                            <li><a href="">Cadastre-se</a></li>
+                            <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span>0</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Banners -->
-    <div class="row" id="banners">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="img/banners/banner1.jpg" alt="Tax Free Weekend" class="fullscreen" />
+    <div class="content-fuild">
+        <div class="row" id="banners">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="img/banners/banner1.jpg" alt="Tax Free Weekend" class="fullscreen" />
+                    </div>
+                    <div class="item">
+                        <img src="img/banners/banner2.jpg" alt="Book Store" class="fullscreen" />
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="img/banners/banner2.jpg" alt="Book Store" class="fullscreen" />
-                </div>
+                <a href="#carousel" class="left carousel-control" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a href="#carousel" class="right carousel-control" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
-            <a href="#carousel" class="left carousel-control" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a href="#carousel" class="right carousel-control" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
         </div>
     </div>
+
+    <!-- Main -->
+    <main>
+        <div class="content-fluid" id="content">
+            <div class="row" style="margin-bottom: 50px;">
+                <section>
+                    <h3 class="content-title">Recomendados a você</h3>
+                    <div class="text-center">
+                        <div class="col-md-3">
+                            <img src="img/products/prod1.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod2.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod3.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod4.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="row" style="margin-bottom: 50px;">
+                <section>
+                    <h3 class="content-title">Últimos lançamentos</h3>
+                    <div class="text-center">
+                        <div class="col-md-3">
+                            <img src="img/products/prod5.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod6.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod7.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod8.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="row" style="margin-bottom: 50px;">
+                <section>
+                    <h3 class="content-title">Mais vendidos</h3>
+                    <div class="text-center">
+                        <div class="col-md-3">
+                            <img src="img/products/prod7.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod2.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod3.jpg" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/products/prod5.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
     <script src="js/node_modules/jquery/dist/jquery.js"></script>
     <script src="js/node_modules/bootstrap/js/carousel.js"></script>
