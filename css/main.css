@@ -124,7 +124,8 @@ footer {
         margin-left: 8em;
     }
     .nav-responsive span {
-        width: 40%;
+        width: 60%;
+        height: 8px;
     }
     .nav-itens-reponsive {
         margin-left: 4em;
