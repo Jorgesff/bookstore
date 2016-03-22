@@ -2,13 +2,15 @@
     Bookstore - main CSS
 */
 
+/* Reset */
+.reset-padding {
+    padding: 0 !important;
+}
+
 /* Header */
 header {
     width: 100%;
     background-color: #232F3E;
-}
-body{
-    overflow-x:hidden;
 }
 .logotype {
     color: #F2F2F2;
@@ -30,7 +32,7 @@ body{
     font-weight: bold;
 }
 .search-bar {
-    padding-top: 1.2em;
+    margin-top: 1.2em;
 }
 .search-font {
     float: right;
@@ -56,6 +58,7 @@ body{
     width:100%;
 }
 
+
 /* Content */
 .content {
     margin: 50px 0 70px 0;
@@ -68,6 +71,7 @@ body{
     border-bottom: 1px solid #CCC;
 }
 
+
 /* Footer */
 footer {
     background:#333;
@@ -75,6 +79,7 @@ footer {
     padding:20px 0;
     text-align:center;
 }
+
 
 /* Hacking */
 .carousel {
@@ -88,13 +93,50 @@ footer {
     background-image: none !important;
 }
 
+/* Menu responsive */
+.nav-responsive span {
+    width: 30px;
+    height: 5px;
+    margin: 4px 0;
+    display: block;
+    background: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
 
 /* Media query */
-@media (max-width: 980px) {
+@media(max-width: 980px) {
     .content-products {
         margin-bottom: 5em;
     }
     .content {
         margin: 25px 0 0 0 !important;
+    }
+}
+
+@media(max-width: 1103px) {
+    .nav-responsive {
+        display: inline !important;
+        color: white !important;
+        margin-top: 1.2em;
+        margin-left: 8em;
+    }
+    .nav-responsive span {
+        width: 40%;
+    }
+    .nav-itens-reponsive {
+        margin-left: 4em;
+    }
+    .nav-menu {
+        display: none !important;
+    }
+    .search-bar input {
+        height: 40px;
+    }
+    .search-font {
+        margin-top: -40px;
+        padding-top: 7px;
     }
 }

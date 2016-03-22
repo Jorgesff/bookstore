@@ -9,62 +9,62 @@
 </head>
 <body>
     <header>
-        <div class="content-fluid">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 reset-padding">
                     <h1 class="logotype">BookStore</h1>
                 </div>
-                <div class="col-md-6">
-                    <form class="search-bar">
-                        <div class="form-group">
-                            <input type="text" id="search_bar" class="form-control" placeholder="O que você procura ?" />
-                            <button class="search-font">
-                                <span class="glyphicon glyphicon-search search-icon"></span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-">
-                    <nav class="nav-menu">
-                        <ul>
-                            <li><a href="">Login</a></li>
-                            <li><a href="">Cadastre-se</a></li>
-                            <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span>0</li>
-                        </ul>
-                    </nav>
-                </div>
+                <form class="search-bar col-xs-7 col-sm-6 col-md-6 col-lg-6 reset-padding">
+                    <div class="form-group">
+                        <input type="text" id="search_bar" class="form-control" placeholder="O que você procura ?" />
+                        <button class="search-font">
+                            <span class="glyphicon glyphicon-search search-icon"></span>
+                        </button>
+                    </div>
+                </form>
+                <nav class="nav-menu col-sm-4 col-md-4 col-lg-4 reset-padding">
+                    <ul class="nav-itens">
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Cadastre-se</a></li>
+                        <li><a href="">SAC</a></li>
+                        <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span></li>
+                    </ul>
+                </nav>
+                <nav class="nav-responsive col-xs-2 col-sm-2" style="display:none;">
+                    <div class="nav-itens-reponsive">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
 
     <!-- Banners -->
-    <div class="content-fuild">
-        <div class="row" id="banners">
-            <div id="carousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="img/banners/banner1_new.jpg" alt="Tax Free Weekend" class="fullscreen" />
-                    </div>
-                    <div class="item">
-                        <img src="img/banners/banner2_new.jpg" alt="Book Store" class="fullscreen" />
-                    </div>
-                    <div class="item">
-                        <img src="img/banners/banner3_new.jpg" alt="Book Store" class="fullscreen" />
-                    </div>
-                </div>
-                <a href="#carousel" class="left carousel-control" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a href="#carousel" class="right carousel-control" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/banners/banner1_new.jpg" alt="Tax Free Weekend" class="fullscreen"/>
+            </div>
+            <div class="item">
+                <img src="img/banners/banner2_new.jpg" alt="Book Store" class="fullscreen"/>
+            </div>
+            <div class="item">
+                <img src="img/banners/banner3_new.jpg" alt="Book Store" class="fullscreen"/>
             </div>
         </div>
+        <a href="#carousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
 
     <!-- Main -->
     <main>
-        <div class="content-fluid" id="content">
+        <div class="container-fluid" id="content">
             <div class="row content">
                 <section>
                     <h3 class="content-title">Recomendados a você</h3>
