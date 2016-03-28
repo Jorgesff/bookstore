@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <title>BookStore</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="js/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="js/node_modules/normalize.css/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:400,900,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+   <header>
+        <div class="logotype reset-padding">
+            <h1>BookStore</h1>
+        </div>
+        <form class="search-bar reset-padding">
+            <div class="form-group">
+                <input type="text" id="search_bar" class="form-control" placeholder="O que você procura ?" />
+                <button class="search-font">
+                    <span class="glyphicon glyphicon-search search-icon"></span>
+                </button>
+            </div>
+        </form>
+        <nav class="nav-menu reset-padding">
+            <ul class="nav-itens">
+                <li><a href="">Login</a></li>
+                <li><a href="">Cadastre-se</a></li>
+                <li><a href="">SAC</a></li>
+                <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span></li>
+            </ul>
+        </nav>
+        <nav class="nav-responsive" style="display:none;">
+            <div class="nav-itens-reponsive">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="form-cad" class="container-fluid" ng-app="myapp" ng-controller="signInController">
+                <h1 id="titulo" class="logotype">BookStore</h1>
+               	
+            <div id="form-container" >
+                <p>Preencha todos os campos abaixo!</p> 
+                <form name='userForm' class="form-horizontal" ng-submit="confirma()">
+
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
+                        <label class="control-label col-sm-2" for="name">Nome:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" placeholder="Digite seu nome..." name="name" ng-model="name" required></input>
+                           <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Seu nome é obrigatório</p>                        
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}" >
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail aqui..." ng-model="email" required></input>
+                            <p ng-show=" userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Informe um e-mail válido.</p>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
+                        <label class="control-label col-sm-2" for="pwd">Senha:</label>
+                        <div class="col-sm-8">
+                            <input id="pwd" type="password" class="form-control" name="paswd" placeholder="Digite sua senha aqui..." ng-model="paswd" ng-minlength="5" ng-maxlength="16" required></input>
+                            <p ng-show="userForm.paswd.$error.minlength" class="help-block">senha no mínimo 5 caracteres.</p>
+                            <p ng-show="userForm.paswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>         
+                        </div>
+                    </div> 
+
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
+                        <label class="control-label col-sm-2" for="rptPwd">Digite a senha novamente:</label>
+                        <div class="col-sm-8">
+                            <input id="rptPaswd" type="password" class="form-control" name="rptPaswd" placeholder="Digite sua senha novamente..." ng-model="rptPaswd" ng-minlength="5" ng-maxlength="16" required></input>    
+                            <p ng-show="userForm.rptPaswd.$error.minlength" class="help-block">senha no mínimo 5 caracteres.</p>
+                            <p ng-show="userForm.rptPaswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>
+                        </div>
+                    
+                    </div>
+                    <script type="text/javascript">
+                    	var	myapp = angular.module("myapp",[]);
+						myapp.controller("signInController", function($scope){
+	
+							$scope.confirma = function(){
+							     if ($scope.userForm.$valid) {
+                                    alert('Cadastro efetuado com sucesso');
+                                 }
+							};
+						});
+                    </script>
+                    <button type="button" class="btn btn-default" >Voltar</button> 
+                    <button type="submit" class="btn btn-success" >Confirma</button>
+                </form>
+            </div>
+        </div>
+        <div id="img-box" class="container-fluid">
+        	<div>
+        			<img id="cad-img" src="img/banners/banner_signIn.jpg" alt="">
+                    <p>Bem vindo a BookStore!</p>
+        	</div>
+        </div>
+    </main> 
+    <script src="js/node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/node_modules/bootstrap/js/carousel.js"></script>
+    <script src="js/node_modules/bootstrap/js/transition.js"></script>
+    
+
+</body>
+</html>

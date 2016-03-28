@@ -18,9 +18,9 @@ header {
     float: left;
 }
 .logotype h1 {
+	font-family: 'Cinzel', serif;
     color: #F2F2F2;
     margin-left: 1em;
-
 }
 .nav-menu {
     width: 30%;
@@ -207,4 +207,49 @@ footer {
         width: 5%;
         margin: -9em 6em 0 0;
     }
+}
+
+/* Pagina SignIn.html */
+#form-cad{
+    float: right;
+    width: 60%;
+
+}
+#form-container{
+    padding-top: 15%;
+}
+#form-cad h1{
+    color: #232F3E;
+    padding-left: 30%;
+    padding-top: 5%;
+}
+#titulo{
+	font-family:'Cinzel', serif ;
+}
+
+#form-container p{
+    color:#232F3E;
+    padding-left: 8%;
+    font-size: medium;
+}
+#form-container form button{
+    float: right;
+    padding-right: 15%;
+    text-align: right;
+    pad
+}
+#cad-img{
+    padding-left: 25%;
+    width: 80%;
+    padding-top: 15%;
+}
+#img-box{
+    float: left;
+    width: 40%;
+}
+#img-box div p{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: large;
+    color: #000000;
 }
