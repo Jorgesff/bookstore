@@ -78,7 +78,7 @@
                     <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
                         <label class="control-label col-sm-2" for="rptPwd">Digite a senha novamente:</label>
                         <div class="col-sm-8">
-                            <input id="rptPaswd" type="password" class="form-control" name="rptPaswd" placeholder="Digite sua senha novamente..." ng-model="rptPaswd" ng-minlength="5" ng-maxlength="16" required></input>    
+                            <input id="rptPaswd" type="password" class="form-control" name="rptPaswd" placeholder="Digite sua senha novamente..." ng-model="rptPaswd" ng-minlength="5" ng-maxlength="16" required ></input>    
                             <p ng-show="userForm.rptPaswd.$error.minlength" class="help-block">senha no mínimo 5 caracteres.</p>
                             <p ng-show="userForm.rptPaswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>
                         </div>
@@ -89,10 +89,15 @@
 						myapp.controller("signInController", function($scope){
 	
 							$scope.confirma = function(){
-							     if ($scope.userForm.$valid) {
-                                    alert('Cadastro efetuado com sucesso');
+
+							     if ($scope.paswd == $scope.rptPaswd) {
+                                    if ($scope.userForm.$valid) {
+                                        alert('Cadastro efetuado com sucesso');
+                                    }
+							     }else{
+                                        alert('As senhas não correspondem');
                                  }
-							};
+                             }
 						});
                     </script>
                     <button type="button" class="btn btn-default" >Voltar</button> 
