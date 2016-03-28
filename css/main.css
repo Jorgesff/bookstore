@@ -116,6 +116,22 @@ footer {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+.nav-responsive-items {
+    color: #F2F2F2;
+    float: left;
+}
+.nav-responsive-items ul {
+    float: left;
+    padding: 0 !important;
+}
+.nav-responsive-items ul li {
+    list-style: none;
+    padding: 0 1em;
+}
+.nav-responsive-items ul li a {
+    color: #F2F2F2;
+}
+
 
 @media(max-width: 1300px) and (min-width: 992px) {
     .search-bar {
