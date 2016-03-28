@@ -116,6 +116,22 @@ footer {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+.nav-responsive-items {
+    color: #F2F2F2;
+    float: left;
+}
+.nav-responsive-items ul {
+    float: left;
+    padding: 0 !important;
+}
+.nav-responsive-items ul li {
+    list-style: none;
+    padding: 0 1em;
+}
+.nav-responsive-items ul li a {
+    color: #F2F2F2;
+}
+
 
 @media(max-width: 1300px) and (min-width: 992px) {
     .search-bar {
@@ -124,9 +140,6 @@ footer {
     .nav-menu {
         width: 35%;
         font-size: .9em;
-    }
-    body {
-        background-color: red;
     }
 }
 
@@ -138,9 +151,6 @@ footer {
         width: 35%;
         font-size: .85em;
         margin-top: .5em;
-    }
-    body {
-        background-color: yellow;
     }
 }
 
@@ -168,9 +178,6 @@ footer {
         margin-top: -40px;
         padding-top: 7px;
     }
-    body {
-        background-color: black;
-    }
 }
 
 @media(max-width: 900px) {
@@ -191,9 +198,6 @@ footer {
     }
     .content-title {
         font-size: 1.8em;
-    }
-    body {
-        background-color: white;
     }
 }
 
