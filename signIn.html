@@ -7,8 +7,7 @@
     <link rel="stylesheet" type="text/css" href="js/node_modules/normalize.css/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="http://digitalbush.com/wp-content/uploads/2014/10/jquery.maskedinput.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Cinzel:400,900,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -45,10 +44,13 @@
     </header>
 
     <main>
+        <div id="div_titulo">
+            <h1 id="titulo" class="logotype">BookStore</h1>
+        </div>
+        
         <div id="form-cad" class="container-fluid" ng-app="myapp" ng-controller="signInController">
-                <h1 id="titulo" class="logotype">BookStore</h1>
-
             <div id="form-container" >
+            <section>
                 <p>Preencha todos os campos abaixo!</p>
                 <form name='userForm' class="form-horizontal" ng-submit="confirma()">
 
@@ -83,10 +85,52 @@
                             <p ng-show="userForm.rptPaswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>
                         </div>
                     </div>
+                    <hr>
+                    <p>Localização</p>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="endr">Endereço:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Digite nome da rua..." name="endr" ng-model="endr"></input>
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="control-label col-sm-2" for="nr">Numero:</label>
+                        <div class="col-sm-3">
+                            <input id="nr" class="form-control" placeholder="..." name="nr" ng-model="nr" width="30px"></input>
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="control-label col-sm-2" for="cep">CEP:</label>
+                        <div class="col-sm-5">
+                            <input id="cep" type="text" class="form-control" name="cep" ng-model="cep"></input>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        jQuery("input#nr")
+                            .mask("9999")
+                            .focusout(function (event) {  
+                            var target, nr, element;  
+                            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+                            nr = target.value.replace(/\D/g, '');
+                            element = $(target);  
+                            element.unmask();   
+                        });
+
+                    jQuery("input#cep")
+                        .mask("99999-999")
+                        .focusout(function (event) {  
+                        var target, cep, element;  
+                        target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+                        cep = target.value.replace(/\D/g, '');
+                        element = $(target);  
+                        element.unmask();
+                    });
+                    </script>
                     <script type="text/javascript">
                     	var	myapp = angular.module("myapp",[]);
 						myapp.controller("signInController", function($scope){
-
 							$scope.confirma = function(){
 
 							     if ($scope.paswd == $scope.rptPaswd) {
@@ -99,22 +143,25 @@
                              }
 						});
                     </script>
-                    <button type="button" class="btn btn-default" >Voltar</button>
-                    <button type="submit" class="btn btn-success" >Confirma</button>
+                    <div id="div_btn">
+                        <button type="button" class="btn btn-default" >Voltar</button>
+                        <button type="submit" class="btn btn-success" >Confirma</button>
+                    </div>
                 </form>
+                </section>
             </div>
         </div>
+        <section>
         <div id="img-box" class="container-fluid">
         	<div>
         			<img id="cad-img" src="img/banners/banner_signIn.jpg" alt="">
                     <p>Bem vindo a BookStore!</p>
         	</div>
         </div>
+        </section>
     </main>
     <script src="js/node_modules/jquery/dist/jquery.js"></script>
     <script src="js/node_modules/bootstrap/js/carousel.js"></script>
     <script src="js/node_modules/bootstrap/js/transition.js"></script>
-
-
 </body>
 </html>

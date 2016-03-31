@@ -220,7 +220,7 @@ footer {
 
 }
 #form-container{
-    padding-top: 15%;
+    padding-top: 5%;
 }
 #form-cad h1{
     color: #232F3E;
@@ -238,10 +238,17 @@ footer {
 }
 #form-container form button{
     float: right;
+    margin-right: 4%;
     padding-right: 15%;
     text-align: right;
-    pad
+    right: 5%; 
 }
+
+#div_btn{
+    width: 30%;
+    float: right;
+}
+
 #cad-img{
     padding-left: 25%;
     width: 80%;
@@ -254,6 +261,21 @@ footer {
 #img-box div p{
     text-align: center;
     font-family: 'Cinzel', serif;
-    font-size: large;
+    font-size: x-large;
     color: #000000;
+}
+hr{
+    border: outset 2px #6566F3;
+    opacity: .30;
+}
+#nr {
+    width: 60px;
+}
+#titulo{    
+    text-align: center;
+    width: 100%;
+    font-size: xx-large;
+}
+#div_titulo{
+    width: 100%;
 }
