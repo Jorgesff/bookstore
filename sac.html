@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BookStore</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="js/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="js/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:400,900,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <header>
+        <div class="logotype reset-padding">
+            <h1><a href="index.html" style="color: #F2F2F2; text-decoration: none;">BookStore</a></h1>
+        </div>
+        <form class="search-bar reset-padding">
+            <div class="form-group">
+                <input type="text" id="search_bar" class="form-control" placeholder="O que você procura ?" />
+                <button class="search-font">
+                    <span class="glyphicon glyphicon-search search-icon"></span>
+                </button>
+            </div>
+        </form>
+        <nav class="nav-menu reset-padding">
+            <ul class="nav-itens">
+                <li><a href="">Login</a></li>
+                <li><a href="signIn.html">Cadastre-se</a></li>
+                <li><a href="sac.html">SAC</a></li>
+                <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span></li>
+            </ul>
+        </nav>
+        <nav class="nav-responsive" style="display:none;">
+            <div class="nav-itens-reponsive">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <nav class="nav-responsive-items" style="display: none;">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="signIn.html">Cadastre-se</a></li>
+                <li><a href="sac.html">SAC</a></li>
+                <li><a href="#">Meu Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="container-fluid" id="content">
+            <div class="row content">
+                <section>
+                    <h3 class="content-title" style="padding-top: 2em;">Conheça como nosso SAC funciona</h3>
+                        <iframe style="margin-left:3em;" width="560" height="315" src="https://www.youtube.com/embed/sDJ56uBjJJo"
+                            frameborder="0" allowfullscreen></iframe>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="height: 250px;">
+        <p>Avenida Major Nicacio nº 1</p>
+        <p>(16) 3721-1234</p>
+    </footer>
+
+    <script src="js/node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/node_modules/bootstrap/js/carousel.js"></script>
+    <script src="js/node_modules/bootstrap/js/transition.js"></script>
+    <script src="js/node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

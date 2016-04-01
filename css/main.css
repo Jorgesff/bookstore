@@ -116,6 +116,22 @@ footer {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+.nav-responsive-items {
+    color: #F2F2F2;
+    float: left;
+}
+.nav-responsive-items ul {
+    float: left;
+    padding: 0 !important;
+}
+.nav-responsive-items ul li {
+    list-style: none;
+    padding: 0 1em;
+}
+.nav-responsive-items ul li a {
+    color: #F2F2F2;
+}
+
 
 @media(max-width: 1300px) and (min-width: 992px) {
     .search-bar {
@@ -204,7 +220,7 @@ footer {
 
 }
 #form-container{
-    padding-top: 10%;
+    padding-top: 5%;
 }
 #form-cad h1{
     color: #232F3E;
@@ -224,10 +240,17 @@ footer {
 }
 #form-container form button{
     float: right;
-    padding-right: 25%;
+    margin-right: 4%;
+    padding-right: 15%;
     text-align: right;
-    margin-right: 5%;
+    right: 5%; 
 }
+
+#div_btn{
+    width: 30%;
+    float: right;
+}
+
 #cad-img{
     padding-left: 25%;
     width: 80%;
@@ -240,10 +263,21 @@ footer {
 #img-box div p{
     text-align: center;
     font-family: 'Cinzel', serif;
-    font-size: 2em;
+    font-size: x-large;
     color: #000000;
 }
-#div_btn{
-    width: 40%;
-    float: right;
+hr{
+    border: outset 2px #6566F3;
+    opacity: .30;
+}
+#nr {
+    width: 60px;
+}
+#titulo{    
+    text-align: center;
+    width: 100%;
+    font-size: xx-large;
+}
+#div_titulo{
+    width: 100%;
 }

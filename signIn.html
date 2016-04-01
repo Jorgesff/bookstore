@@ -15,7 +15,8 @@
 <body>
    <header>
         <div class="logotype reset-padding">
-            <h1><a href="index.html" style="text-decoration:none; color:white;">BookStore</a></h1>
+
+            <h1><a href="index.html" style="color: #F2F2F2; text-decoration: none;">BookStore</a></h1>
         </div>
         <form class="search-bar reset-padding">
             <div class="form-group">
@@ -28,8 +29,8 @@
         <nav class="nav-menu reset-padding">
             <ul class="nav-itens">
                 <li><a href="">Login</a></li>
-                <li><a href="">Cadastre-se</a></li>
-                <li><a href="">SAC</a></li>
+                <li><a href="signIn.html">Cadastre-se</a></li>
+                <li><a href="sac.html">SAC</a></li>
                 <li style="color: red;"><span class="shop-card glyphicon glyphicon-shopping-cart"></span></li>
             </ul>
         </nav>
@@ -40,19 +41,28 @@
                 <span></span>
             </div>
         </nav>
+        <nav class="nav-responsive-items" style="display: none;">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="signIn.html">Cadastre-se</a></li>
+                <li><a href="sac.html">SAC</a></li>
+                <li><a href="#">Meu Carrinho</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <div id="form-cad" class="container-fluid" ng-app="myapp" ng-controller="signInController">  	
             <div id="form-container" >
-                <p>Preencha todos os campos abaixo!</p> 
+            <section>
+                <p>Preencha todos os campos abaixo!</p>
                 <form name='userForm' class="form-horizontal" ng-submit="confirma()">
 
                     <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
                         <label class="control-label col-sm-2" for="name">Nome:</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" placeholder="Digite seu nome..." name="name" ng-model="name" required></input>
-                           <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Seu nome é obrigatório</p>                        
+                           <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Seu nome é obrigatório</p>
                         </div>
                     </div>
                     <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}" >
@@ -67,14 +77,14 @@
                         <div class="col-sm-8">
                             <input id="pwd" type="password" class="form-control" name="paswd" placeholder="Digite sua senha aqui..." ng-model="paswd" ng-minlength="5" ng-maxlength="16" required></input>
                             <p ng-show="userForm.paswd.$error.minlength" class="help-block">senha no mínimo 5 caracteres.</p>
-                            <p ng-show="userForm.paswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>         
+                            <p ng-show="userForm.paswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>
                         </div>
-                    </div> 
+                    </div>
 
                     <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
                         <label class="control-label col-sm-2" for="rptPwd">Digite a senha novamente:</label>
                         <div class="col-sm-8">
-                            <input id="rptPaswd" type="password" class="form-control" name="rptPaswd" placeholder="Digite sua senha novamente..." ng-model="rptPaswd" ng-minlength="5" ng-maxlength="16" required ></input>    
+                            <input id="rptPaswd" type="password" class="form-control" name="rptPaswd" placeholder="Digite sua senha novamente..." ng-model="rptPaswd" ng-minlength="5" ng-maxlength="16" required ></input>
                             <p ng-show="userForm.rptPaswd.$error.minlength" class="help-block">senha no mínimo 5 caracteres.</p>
                             <p ng-show="userForm.rptPaswd.$error.maxlength" class="help-block">senha no máximo 16 caracteres.</p>
                         </div>            
@@ -101,6 +111,42 @@
                             <input id="cep" type="text" class="form-control" name="cep" ng-model="cep"></input>
                         </div>
                     </div>
+                    <script type="text/javascript">
+                        jQuery("input#nr")
+                            .mask("9999")
+                            .focusout(function (event) {  
+                            var target, nr, element;  
+                            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+                            nr = target.value.replace(/\D/g, '');
+                            element = $(target);  
+                            element.unmask();   
+                        });
+
+                    jQuery("input#cep")
+                        .mask("99999-999")
+                        .focusout(function (event) {  
+                        var target, cep, element;  
+                        target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+                        cep = target.value.replace(/\D/g, '');
+                        element = $(target);  
+                        element.unmask();
+                    });
+                    </script>
+                    <script type="text/javascript">
+                    	var	myapp = angular.module("myapp",[]);
+						myapp.controller("signInController", function($scope){
+							$scope.confirma = function(){
+
+							     if ($scope.paswd == $scope.rptPaswd) {
+                                    if ($scope.userForm.$valid) {
+                                        alert('Cadastro efetuado com sucesso');
+                                    }
+							     }else{
+                                        alert('As senhas não correspondem');
+                                 }
+                             }
+						});
+                    </script>
                     <div id="div_btn">
                         <button type="button" class="btn btn-default" >Voltar</button>
                         <button type="submit" class="btn btn-success" >Confirma</button>
@@ -120,47 +166,8 @@
         </main> 
     </div>
 </div>
-            <script type="text/javascript">
-        jQuery("input#nr")
-            .mask("9999")
-            .focusout(function (event) {  
-            var target, nr, element;  
-            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
-            nr = target.value.replace(/\D/g, '');
-            element = $(target);  
-            element.unmask();   
-        });
-
-    jQuery("input#cep")
-        .mask("99999-999")
-        .focusout(function (event) {  
-        var target, cep, element;  
-        target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
-        cep = target.value.replace(/\D/g, '');
-        element = $(target);  
-        element.unmask();
-    });
-    </script>
-    <script type="text/javascript">
-        var myapp = angular.module("myapp",[]);
-        myapp.controller("signInController", function($scope){
-            $scope.confirma = function(){
-
-                 if ($scope.paswd == $scope.rptPaswd) {
-                    if ($scope.userForm.$valid) {
-                        alert('Cadastro efetuado com sucesso');
-                    }
-                 }else{
-                        alert('As senhas não correspondem');
-                 }
-             }
-        });
-    </script>
-
     <script src="js/node_modules/jquery/dist/jquery.js"></script>
     <script src="js/node_modules/bootstrap/js/carousel.js"></script>
     <script src="js/node_modules/bootstrap/js/transition.js"></script>
-    
-
 </body>
 </html>
